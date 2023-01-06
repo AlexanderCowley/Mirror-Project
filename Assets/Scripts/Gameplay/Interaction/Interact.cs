@@ -13,7 +13,7 @@ public class Interact : MonoBehaviour
 
     void GetEvents()
     {
-        InteractEffects[] effects = GetComponents<InteractEffects>();
+        InteractEffect[] effects = GetComponents<InteractEffect>();
         for(int i = 0; i < effects.Length; i++)
             InteractHandler += effects[i].InteractEvent;
     }

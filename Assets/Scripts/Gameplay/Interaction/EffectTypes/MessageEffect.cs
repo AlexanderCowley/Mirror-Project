@@ -1,5 +1,5 @@
 using UnityEngine;
-public class MessageEffect : InteractEffects
+public class MessageEffect : InteractEffect
 {
     [SerializeField] string Message;
     public override void InteractEvent()
