@@ -9,6 +9,7 @@ public class Interact : MonoBehaviour
     {
         GetEvents();
     }
+    
     public void OnInteract() => InteractHandler?.Invoke();
 
     void GetEvents()
