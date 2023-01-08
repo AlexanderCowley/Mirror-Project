@@ -12,7 +12,8 @@ public class PlayerInteract : MonoBehaviour
     {
         _rayCastTransform = transform.GetChild(0).transform;
         _playerMovement = GetComponent<Move>();
-    } 
+    }
+    
     void Interact()
     {
         RaycastHit hit;
