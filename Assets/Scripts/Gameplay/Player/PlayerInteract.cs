@@ -13,12 +13,13 @@ public class PlayerInteract : MonoBehaviour
         _rayCastTransform = transform.GetChild(0).transform;
         _playerMovement = GetComponent<Move>();
     }
-    
+
     void Interact()
     {
         RaycastHit hit;
         if(Physics.Raycast(_rayCastTransform.position, FacingDirection, out hit, InteractRange))
-            hit.transform.GetComponent<Interact>()?.OnInteract();
+            hit.transform.GetComponent<Interact>()?.OnInteract(true);
+            
     }
 
     void OnDrawGizmos()
@@ -36,7 +37,7 @@ public class PlayerInteract : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E))
             Interact();
 
-        if(_playerMovement != null)
+        if(_playerMovement != null && _playerMovement.FacingDirection != Vector3.zero)
             FacingDirection = _playerMovement.FacingDirection;
     }
 }
