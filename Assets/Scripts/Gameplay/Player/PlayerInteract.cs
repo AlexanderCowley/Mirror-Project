@@ -1,4 +1,6 @@
 using UnityEngine;
+
+[SelectionBase]
 public class PlayerInteract : MonoBehaviour
 {
     Transform _rayCastTransform;
