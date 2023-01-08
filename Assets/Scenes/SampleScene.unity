@@ -218,7 +218,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &584703539
 GameObject:
@@ -835,6 +835,7 @@ GameObject:
   - component: {fileID: 1163150900}
   - component: {fileID: 1163150899}
   - component: {fileID: 1163150904}
+  - component: {fileID: 1163150905}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -854,6 +855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b930445e959d0e94182171577b769c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <IsInteractable>k__BackingField: 1
 --- !u!65 &1163150900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -930,7 +932,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1163150904
 MonoBehaviour:
@@ -945,6 +947,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Message: This is a message
+--- !u!114 &1163150905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163150898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85ab39d690837441922fe6843442534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToTrigger: {fileID: 1472984059}
 --- !u!1 &1208504079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,6 +1240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b930445e959d0e94182171577b769c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <IsInteractable>k__BackingField: 0
 --- !u!1 &1655943568
 GameObject:
   m_ObjectHideFlags: 0
