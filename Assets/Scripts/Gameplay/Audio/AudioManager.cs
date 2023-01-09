@@ -27,10 +27,10 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySceneBG()
     {
-        PlayMusic(_bgAudioSource);
+        PlaySoundEffects(_bgAudioSource);
     }
 
-    public void PlayMusic(AudioSource audioSource)
+    public void PlaySoundEffects(AudioSource audioSource)
     {
         audioSource?.Play();
     }

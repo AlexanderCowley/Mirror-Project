@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
-public class PlayAudioEffect : InteractEffect
+public class PlayAudioClip : MonoBehaviour
 {
     AudioSource _audioSource;
     [SerializeField] AudioClip _clipToPlay;
@@ -11,8 +13,15 @@ public class PlayAudioEffect : InteractEffect
 
         if(_audioSource.clip == null)
             _audioSource.clip = _clipToPlay;
-    } 
-    public override void InteractEvent()
+    }
+
+    void OnTriggerEnter(Collider other) 
+    {
+        if(other.GetComponent<CharacterController>() != null)
+            PlayClip();
+    }
+
+    public void PlayClip()
     {
         AudioManager.Instance.PlaySoundEffects(_audioSource);
     }
