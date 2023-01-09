@@ -14,7 +14,6 @@ public class PlayAudioEffect : InteractEffect
     } 
     public override void InteractEvent()
     {
-        Debug.Log("Play Audio Clip");
         //AudioManager.Instance.PlayMusic(_audioSource);
     }
 }
