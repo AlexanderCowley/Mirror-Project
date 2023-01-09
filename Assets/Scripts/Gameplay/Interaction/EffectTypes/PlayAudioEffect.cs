@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class PlayAudioEffect : InteractEffect
@@ -17,6 +15,6 @@ public class PlayAudioEffect : InteractEffect
     public override void InteractEvent()
     {
         Debug.Log("Play Audio Clip");
-        _audioSource?.Play();
+        //AudioManager.Instance.PlayMusic(_audioSource);
     }
 }
