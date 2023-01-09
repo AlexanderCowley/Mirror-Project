@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseGame : MonoBehaviour
@@ -9,6 +7,7 @@ public class PauseGame : MonoBehaviour
     void Awake() 
     {
         _pauseCanvas = GetComponent<CanvasToggle>();
+        DontDestroyOnLoad(this);
     }
 
     void TogglePause()
