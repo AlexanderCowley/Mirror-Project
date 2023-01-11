@@ -9,9 +9,9 @@ public class FlipSprites : MonoBehaviour
     void Flip()
     {
         if(Input.GetAxis("Horizontal") > 0) 
-            _spriteRenderer.flipX = true;
-        else if(Input.GetAxis("Horizontal") < 0) 
             _spriteRenderer.flipX = false;
+        else if(Input.GetAxis("Horizontal") < 0) 
+            _spriteRenderer.flipX = true;
     }
 
     void Update() => Flip();
