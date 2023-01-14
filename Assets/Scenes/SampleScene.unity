@@ -1174,10 +1174,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3530977618122812995, guid: 465a5a4e302a0b845964f3f4d6ba8b16, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.44
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 465a5a4e302a0b845964f3f4d6ba8b16, type: 3}
 --- !u!1001 &5020651465435761526
@@ -1246,7 +1242,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6880762423411754218, guid: 6c4ec4ae2b1f1304e974541d03539110, type: 3}
       propertyPath: m_Name
-      value: Door Switch
+      value: Switch
       objectReference: {fileID: 0}
     - target: {fileID: 6880762423411754220, guid: 6c4ec4ae2b1f1304e974541d03539110, type: 3}
       propertyPath: m_RootOrder
@@ -1254,11 +1250,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6880762423411754220, guid: 6c4ec4ae2b1f1304e974541d03539110, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.76
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 6880762423411754220, guid: 6c4ec4ae2b1f1304e974541d03539110, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3
+      value: 2.26
       objectReference: {fileID: 0}
     - target: {fileID: 6880762423411754220, guid: 6c4ec4ae2b1f1304e974541d03539110, type: 3}
       propertyPath: m_LocalPosition.z
