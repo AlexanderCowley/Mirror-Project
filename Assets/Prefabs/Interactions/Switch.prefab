@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8073a7aa43f3804bba672f0d59aeb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Anim_Name: ToggleSwitch_On
+  AnimName: ToggleSwitch_On
 --- !u!95 &6880762422263635234
 Animator:
   serializedVersion: 4
