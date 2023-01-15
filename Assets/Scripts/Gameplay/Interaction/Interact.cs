@@ -6,6 +6,7 @@ public class Interact : MonoBehaviour
 {
     [field: SerializeField] public bool IsInteractable {get; private set;} = true;
     public Action InteractHandler;
+    InteractEffect[] effects;
     void Awake() 
     {
         GetEvents();
@@ -21,8 +22,14 @@ public class Interact : MonoBehaviour
 
     void GetEvents()
     {
-        InteractEffect[] effects = GetComponents<InteractEffect>();
+        effects = GetComponents<InteractEffect>();
         for(int i = 0; i < effects.Length; i++)
             InteractHandler += effects[i].InteractEvent;
+    }
+
+    void OnDisable() 
+    {
+        for(int i = 0; i < effects.Length; i++)
+            InteractHandler -= effects[i].InteractEvent;
     }
 }
