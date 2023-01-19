@@ -18,7 +18,7 @@ public class PlayerInteract : MonoBehaviour
     {
         RaycastHit hit;
         if(Physics.Raycast(_rayCastTransform.position, FacingDirection, out hit, InteractRange))
-            hit.transform.GetComponent<Interact>()?.OnInteract(true);
+            hit.transform.GetComponent<InputToggleInteract>()?.OnInteract(true);
             
     }
 

@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
 
-[DisallowMultipleComponent]
-public class Interact : MonoBehaviour
+public abstract class Interact : MonoBehaviour
 {
     [field: SerializeField] public bool IsInteractable {get; private set;} = true;
     public Action InteractHandler;
@@ -12,15 +11,9 @@ public class Interact : MonoBehaviour
         GetEvents();
     }
 
-    public void OnInteract(bool isPlayer)
-    {
-        if(!IsInteractable && isPlayer)
-            return;
-        
-        InteractHandler?.Invoke();
-    }
+    public abstract void OnInteract(bool isPlayer);
 
-    void GetEvents()
+    protected void GetEvents()
     {
         effects = GetComponents<InteractEffect>();
         for(int i = 0; i < effects.Length; i++)
