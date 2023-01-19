@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8573197595791302702}
   - component: {fileID: 8573197595791302697}
   - component: {fileID: 8573197595791302696}
-  - component: {fileID: 8573197595791302703}
-  - component: {fileID: 8573197595791302701}
   - component: {fileID: 8573197595791302700}
+  - component: {fileID: 4784282186643480111}
+  - component: {fileID: 8573197595791302701}
   - component: {fileID: 8573197595791302706}
   m_Layer: 0
   m_Name: Door
@@ -102,32 +102,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8573197595791302703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8573197595791302699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b930445e959d0e94182171577b769c80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <IsInteractable>k__BackingField: 0
---- !u!114 &8573197595791302701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8573197595791302699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4d7ac06f07f9641b72cb38f3f0463b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clipToPlay: {fileID: 8300000, guid: 5f6e6926dc704934082098db383caff1, type: 3}
 --- !u!82 &8573197595791302700
 AudioSource:
   m_ObjectHideFlags: 0
@@ -224,6 +198,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4784282186643480111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573197595791302699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7aa7642da7e25549bee453beea4c0c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <IsInteractable>k__BackingField: 1
+--- !u!114 &8573197595791302701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573197595791302699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4d7ac06f07f9641b72cb38f3f0463b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clipToPlay: {fileID: 8300000, guid: 5f6e6926dc704934082098db383caff1, type: 3}
 --- !u!114 &8573197595791302706
 MonoBehaviour:
   m_ObjectHideFlags: 0
