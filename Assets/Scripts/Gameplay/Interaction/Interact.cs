@@ -5,7 +5,7 @@ public abstract class Interact : MonoBehaviour
 {
     [field: SerializeField] public bool IsInteractable {get; private set;} = true;
     public Action InteractHandler;
-    InteractEffect[] effects;
+    IInteractEffect[] effects;
     void Awake() 
     {
         GetEvents();
@@ -15,7 +15,7 @@ public abstract class Interact : MonoBehaviour
 
     protected void GetEvents()
     {
-        effects = GetComponents<InteractEffect>();
+        effects = GetComponents<IInteractEffect>();
         for(int i = 0; i < effects.Length; i++)
             InteractHandler += effects[i].InteractEvent;
     }

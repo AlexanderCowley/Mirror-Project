@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class ChangeSpriteEffect : InteractEffect
+public class ChangeSpriteEffect : MonoBehaviour, IInteractEffect
 {
     SpriteRenderer _spriteRenderer;
     [SerializeField] Sprite _spriteToChange;
@@ -10,7 +10,7 @@ public class ChangeSpriteEffect : InteractEffect
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    public override void InteractEvent()
+    public void InteractEvent()
     {
         ChangeSprite();
     }

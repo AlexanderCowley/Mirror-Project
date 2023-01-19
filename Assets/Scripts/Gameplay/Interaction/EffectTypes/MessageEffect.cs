@@ -1,8 +1,8 @@
 using UnityEngine;
-public class MessageEffect : InteractEffect
+public class MessageEffect : MonoBehaviour, IInteractEffect
 {
     [SerializeField] string Message;
-    public override void InteractEvent()
+    public void InteractEvent()
     {
         Debug.Log(Message);
     }

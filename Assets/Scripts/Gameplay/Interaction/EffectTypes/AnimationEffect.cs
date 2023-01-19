@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class AnimationEffect : InteractEffect
+public class AnimationEffect : MonoBehaviour, IInteractEffect
 {
     Animator _animator;
     [SerializeField] string AnimName = string.Empty;
@@ -20,7 +20,7 @@ public class AnimationEffect : InteractEffect
         _animStateHash = Animator.StringToHash(AnimName);
     }
     
-    public override void InteractEvent()
+    public void InteractEvent()
     {
         PlayAnimation();
     }

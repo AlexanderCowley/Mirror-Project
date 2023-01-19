@@ -1,6 +1,6 @@
 using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
-public class PlayAudioEffect : InteractEffect
+public class PlayAudioEffect : MonoBehaviour, IInteractEffect
 {
     AudioSource _audioSource;
     [SerializeField] AudioClip _clipToPlay;
@@ -12,7 +12,7 @@ public class PlayAudioEffect : InteractEffect
         if(_audioSource.clip == null)
             _audioSource.clip = _clipToPlay;
     } 
-    public override void InteractEvent()
+    public void InteractEvent()
     {
         AudioManager.Instance.PlaySoundEffects(_audioSource);
     }
