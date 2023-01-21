@@ -1,23 +1,27 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class AnimationEffect : MonoBehaviour, IInteractEffect
+public class ToggleAnimationEffect : MonoBehaviour, IInteractEffect
 {
     Animator _animator;
-    [SerializeField] string AnimName = string.Empty;
+    [SerializeField] string AnimName;
+    [SerializeField] string AnimName2;
     static int _animStateHash;
+    static int _animStateHash2;
+    int _currentHash = 0;
     bool _invalidStateName = false;
     void Awake() 
     {
         _animator = GetComponent<Animator>();
+
         if(AnimName == string.Empty)
         {
-            Debug.LogError("The Animation State Name has not been filled out!", gameObject);
+            Debug.LogError("The Animation Name Field is Empty!", gameObject);
             _invalidStateName = true;
             return;
         }
-
         _animStateHash = Animator.StringToHash(AnimName);
+        _animStateHash2 = Animator.StringToHash(AnimName2);
     }
     
     public void InteractEvent()
@@ -29,7 +33,7 @@ public class AnimationEffect : MonoBehaviour, IInteractEffect
     {
         if(_invalidStateName)
             return;
-
-        _animator.CrossFade(_animStateHash, 0f, 0);
+        _currentHash = _currentHash == _animStateHash ? _animStateHash2 : _animStateHash;
+        _animator.CrossFade(_currentHash, 0f, 0);
     }
 }
