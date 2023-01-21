@@ -1240,6 +1240,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6880762422263635235, guid: 6c4ec4ae2b1f1304e974541d03539110, type: 3}
+      propertyPath: AnimName2
+      value: ToggleSwitch_Off
+      objectReference: {fileID: 0}
     - target: {fileID: 6880762423411754218, guid: 6c4ec4ae2b1f1304e974541d03539110, type: 3}
       propertyPath: m_Name
       value: Switch
