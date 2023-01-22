@@ -18,15 +18,7 @@ public class OnTriggerInteract : Interact
         UpdateCollisionRef(interact);
         OnInteract(isPlayer);
     }
-
-    public override void OnInteract(bool isPlayer)
-    {
-        if(!IsInteractable && isPlayer)
-            return;
-        
-        InteractHandler?.Invoke();
-    }
-
+    
     void UpdateCollisionRef(PlayerInteract interact)
     {
         if(_triggerEffects.Length == 0)
