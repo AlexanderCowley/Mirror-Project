@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <IsInteractable>k__BackingField: 1
+  <OneTimeUse>k__BackingField: 0
 --- !u!114 &8573197595791302701
 MonoBehaviour:
   m_ObjectHideFlags: 0

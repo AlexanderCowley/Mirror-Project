@@ -1353,9 +1353,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8573197595791302703, guid: 61fa039546598964586f1a515bc71cfa, type: 3}
-      propertyPath: <IsInteractable>k__BackingField
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61fa039546598964586f1a515bc71cfa, type: 3}

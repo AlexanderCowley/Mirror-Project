@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 6880762423411754223}
   - component: {fileID: 6079032027050869116}
   - component: {fileID: 4856954961710346965}
-  - component: {fileID: 6880762422263635235}
   - component: {fileID: 6880762422263635234}
+  - component: {fileID: 2860105508193226213}
   m_Layer: 0
   m_Name: Switch
   m_TagString: Untagged
@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <IsInteractable>k__BackingField: 1
+  <OneTimeUse>k__BackingField: 0
 --- !u!114 &6880762423411754223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,19 +240,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6880762422263635235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6880762423411754218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8073a7aa43f3804bba672f0d59aeb6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimName: ToggleSwitch_On
 --- !u!95 &6880762422263635234
 Animator:
   serializedVersion: 4
@@ -272,3 +260,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2860105508193226213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6880762423411754218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 527a73eb7a95975418cd8201fd43ed07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimName: ToggleSwitch_On
+  AnimName2: ToggleSwitch_Off
