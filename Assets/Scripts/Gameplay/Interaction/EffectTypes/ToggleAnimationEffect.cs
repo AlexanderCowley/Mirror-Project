@@ -6,8 +6,8 @@ public class ToggleAnimationEffect : MonoBehaviour, IInteractEffect
     Animator _animator;
     [SerializeField] string AnimName;
     [SerializeField] string AnimName2;
-    static int _animStateHash;
-    static int _animStateHash2;
+    int _animStateHash;
+    int _animStateHash2;
     int _currentHash = 0;
     bool _invalidStateName = false;
     void Awake() 
@@ -20,8 +20,15 @@ public class ToggleAnimationEffect : MonoBehaviour, IInteractEffect
             _invalidStateName = true;
             return;
         }
-        _animStateHash = Animator.StringToHash(AnimName);
-        _animStateHash2 = Animator.StringToHash(AnimName2);
+        
+        _animStateHash = Animator.StringToHash("Base Layer."+ AnimName);
+        //Avoids setting the hash to _animStateHash2 initally
+        _currentHash = _animStateHash;
+        
+        if(AnimName2 != string.Empty)
+            _animStateHash2 = Animator.StringToHash("Base Layer."+ AnimName2);
+        else
+            _animStateHash2 = _animStateHash;
     }
     
     public void InteractEvent()
@@ -33,7 +40,9 @@ public class ToggleAnimationEffect : MonoBehaviour, IInteractEffect
     {
         if(_invalidStateName)
             return;
-        _currentHash = _currentHash == _animStateHash ? _animStateHash2 : _animStateHash;
+        //Plays the animation
         _animator.CrossFade(_currentHash, 0f, 0);
+        //Sets the hash for the next animation
+        _currentHash = _currentHash != _animStateHash ? _animStateHash : _animStateHash2;
     }
 }
